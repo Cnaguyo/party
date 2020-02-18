@@ -9,20 +9,22 @@ public class partyApp {
 
     public static void main(String[] args) {
 
-        Person person = new Person(" john ", 18 , " cocola " ,true );
+        Person person = new Person(" john ", 18 , " cocola " ,false );
 
         Person person2 = new Person(" sarah ", 19, " Redbull ", false);
+        Party party = new Party();
 
-        List<Person> persons = new ArrayList<>();
-        persons.add(person);
-        persons.add(person2);
+        party.addToList(person);
+        party.addToList(person2);
 
-        for (Person p:persons){
+        party.removeFromList(person);
 
-            System.out.println(p.isAttendingParty());
-            System.out.println(p.getPersonName());
-            System.out.println(p.getFavoriteDrink());
-            System.out.println(p.getAge());
-        }
+//        for (Person p:persons){
+//
+//                System.out.println(p.isAttendingParty());
+//                System.out.println(p.getPersonName());
+//                System.out.println(p.getFavoriteDrink());
+//                System.out.println(p.getAge());
+//        }
     }
 }
